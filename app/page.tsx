@@ -26,6 +26,11 @@ export default function Home() {
           LinkedIn
         </a>
       </div>
+      <footer className={styles.footer}>
+        <a href="/impressum">Impressum</a>
+        <span className={styles.footerDot} />
+        <a href="/datenschutz">Datenschutz</a>
+      </footer>
     </main>
   );
 }
