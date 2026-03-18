@@ -5,7 +5,14 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.card}>
         <h1 className={styles.title}>Guido Simon</h1>
-        <p className={styles.subtitle}>Website</p>
+        <p className={styles.subtitle}>
+          Generalistischer IT-Manager aus Köln mit Wurzeln in der
+          Softwareentwicklung. Heute baue und führe ich leistungsstarke Teams,
+          die moderne Plattformen, Site Reliability Engineering und
+          AI-Infrastruktur im großen Maßstab verantworten. Studiert an der Uni
+          Bonn, geprägt von Jahren hands-on Coding und der Überzeugung, dass
+          herausragende Technik von starken Teams kommt.
+        </p>
         <div className={styles.divider} />
         <a
           href="https://www.linkedin.com/in/real-guido-simon"
