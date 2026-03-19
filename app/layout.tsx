@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CookieConsent from "./components/CookieConsent";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: "Guido Simon",
@@ -12,8 +14,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="de">
+      <body>
+        {children}
+        <GoogleAnalytics />
+        <CookieConsent />
+      </body>
     </html>
   );
 }
