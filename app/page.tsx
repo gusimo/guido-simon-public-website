@@ -1,9 +1,18 @@
+import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.card}>
+        <Image
+          src="/profile.jpg"
+          alt="Guido Simon"
+          width={96}
+          height={96}
+          className={styles.avatar}
+          priority
+        />
         <h1 className={styles.title}>Guido Simon</h1>
         <p className={styles.subtitle}>
           Generalistischer IT-Manager aus Köln mit Wurzeln in der
