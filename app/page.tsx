@@ -1,13 +1,53 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Guido Simon",
+  url: "https://www.guidosimon.de",
+  image: "https://www.guidosimon.de/guido-simon-it-manager-koeln.webp",
+  jobTitle: "IT-Manager",
+  description:
+    "Generalistischer IT-Manager aus Köln mit Wurzeln in der Softwareentwicklung. Erfahren im Aufbau leistungsstarker Teams für Plattformen, SRE und AI-Infrastruktur.",
+  worksFor: {
+    "@type": "Organization",
+    name: "DeepL",
+    url: "https://www.deepl.com",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Rheinische Friedrich-Wilhelms-Universität Bonn",
+    url: "https://www.uni-bonn.de",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Köln",
+    addressRegion: "Nordrhein-Westfalen",
+    addressCountry: "DE",
+  },
+  sameAs: ["https://www.linkedin.com/in/real-guido-simon"],
+  knowsAbout: [
+    "IT Management",
+    "Software Development",
+    "Site Reliability Engineering",
+    "AI Infrastructure",
+    "Team Leadership",
+    "Platform Engineering",
+  ],
+};
+
 export default function Home() {
   return (
     <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className={styles.card}>
         <Image
-          src="/profile.jpg"
-          alt="Guido Simon"
+          src="/guido-simon-it-manager-koeln.webp"
+          alt="Guido Simon – IT-Manager und Tech Lead aus Köln"
           width={96}
           height={96}
           className={styles.avatar}
